@@ -81,7 +81,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        <h1>WebSDK Sample Client View</h1>
+        <h1>WebSDK Client View 240</h1>
 
         <button onClick={getSignature}>MeetNow Train</button>
       </main>
