@@ -22,13 +22,12 @@ function App() {
   var role = 0
   var leaveUrl = 'https://zoom.us/'
   var userName = 'Client View 240a'
-  var userEmail = 'fred@sam.com'
+  var userEmail = ''
   var passWord = new URLSearchParams(window.location.search).get('passcode')
   // pass in the registrant's token if your meeting or webinar requires registration. More info here:
   // Meetings: https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/meetings#join-registered
   // Webinars: https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/webinars#join-registered
-  var registrantToken = 'fEG8ZDQTvt2S-cZm0OogTrZM_ugPB-mjcgr-hnQ71xE.DQMAAAAWZwHwrBZaX2hMSGZrMVNmeTBReGx6UFgzRnVRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
-
+  var registrantToken = ''
   function getSignature(e) {
     e.preventDefault();
 
