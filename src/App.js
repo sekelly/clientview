@@ -1,9 +1,11 @@
+
 import React from 'react';
 
 import './App.css';
-import { ZoomMtg } from '@zoomus/websdk';
 
-ZoomMtg.setZoomJSLib('https://source.zoom.us/2.3.5/lib', '/av');
+declare var ZoomMtg
+
+ZoomMtg.setZoomJSLib('https://source.zoom.us/2.4.0/lib', '/av');
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
@@ -14,19 +16,18 @@ ZoomMtg.i18n.reload('en-US');
 function App() {
 
   // setup your signature endpoint here: https://github.com/zoom/meetingsdk-sample-signature-node.js
-  var signatureEndpoint = ''
-  // This Sample App has been updated to use SDK App type credentials https://marketplace.zoom.us/docs/guides/build/sdk-app
-  var sdkKey = ''
-  var meetingNumber = '123456789'
+  var signatureEndpoint = 'https://websdk210.herokuapp.com/'
+  var apiKey = 'qzloYzd5SRKT9ve2PMc88Q'
+  var meetingNumber = new URLSearchParams(window.location.search).get('meetingnumber')
   var role = 0
-  var leaveUrl = 'http://localhost:3000'
-  var userName = 'React'
-  var userEmail = ''
-  var passWord = ''
+  var leaveUrl = 'https://zoom.us/'
+  var userName = 'Client View 240'
+  var userEmail = 'fred@sam.com'
+  var passWord = new URLSearchParams(window.location.search).get('passcode')
   // pass in the registrant's token if your meeting or webinar requires registration. More info here:
   // Meetings: https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/meetings#join-registered
   // Webinars: https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/webinars#join-registered
-  var registrantToken = ''
+  var registrantToken = 'fEG8ZDQTvt2S-cZm0OogTrZM_ugPB-mjcgr-hnQ71xE.DQMAAAAWZwHwrBZaX2hMSGZrMVNmeTBReGx6UFgzRnVRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
 
   function getSignature(e) {
     e.preventDefault();
@@ -58,7 +59,7 @@ function App() {
           signature: signature,
           meetingNumber: meetingNumber,
           userName: userName,
-          sdkKey: sdkKey,
+          apiKey: apiKey,
           userEmail: userEmail,
           passWord: passWord,
           tk: registrantToken,
@@ -80,10 +81,14 @@ function App() {
   return (
     <div className="App">
       <main>
-        <h1>Zoom Meeting SDK Sample React</h1>
+        <h1>WebSDK Sample Client View</h1>
 
-        <button onClick={getSignature}>Join Meeting</button>
+        <button onClick={getSignature}>MeetNow Train</button>
       </main>
+      <h2>No Pain No Gain</h2>
+      <p>Schedule Appointment</p>
+      <p>Goals</p>
+      <p>Personal Records</p>
     </div>
   );
 }
