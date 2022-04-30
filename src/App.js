@@ -21,7 +21,7 @@ function App() {
   var meetingNumber = new URLSearchParams(window.location.search).get('meetingnumber')
   var role = 0
   var leaveUrl = 'https://zoom.us/'
-  var userName = 'Client View 2.4.0'
+  var userName = 'Client View 2.4'
   var userEmail = 'fred@sam.com'
   var passWord = new URLSearchParams(window.location.search).get('passcode')
   // pass in the registrant's token if your meeting or webinar requires registration. More info here:
