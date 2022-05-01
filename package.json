@@ -2,7 +2,7 @@
   "name": "meetingsdk-sample-react",
   "version": "2.3.5",
   "author": "Tommy Gaessler",
-  "homepage": "",
+  "homepage": "/clientview",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
