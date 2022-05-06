@@ -19,9 +19,9 @@ function App() {
   var signatureEndpoint = 'https://websdk210.herokuapp.com/'
   var apiKey = 'qzloYzd5SRKT9ve2PMc88Q'
   var meetingNumber = new URLSearchParams(window.location.search).get('meetingnumber')
-  var role = 1
+  var role = 0
   var leaveUrl = 'https://zoom.us/'
-  var userName = 'Client VW 240'
+  var userName = 'Client View 240'
   var userEmail = 'client@kelmagaoay.com'
   var passWord = new URLSearchParams(window.location.search).get('passcode')
   // pass in the registrant's token if your meeting or webinar requires registration. More info here:
