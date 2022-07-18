@@ -5,7 +5,7 @@ import './App.css';
 
 declare var ZoomMtg
 
-ZoomMtg.setZoomJSLib('https://source.zoom.us/2.4.0/lib', '/av');
+ZoomMtg.setZoomJSLib('https://source.zoom.us/2.5.0/lib', '/av');
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
@@ -16,12 +16,12 @@ ZoomMtg.i18n.reload('en-US');
 function App() {
 
   // setup your signature endpoint here: https://github.com/zoom/meetingsdk-sample-signature-node.js
-  var signatureEndpoint = 'https://websdk210.herokuapp.com/'
+  var signatureEndpoint = 'http:localhost:4000'
   var apiKey = 'qzloYzd5SRKT9ve2PMc88Q'
   var meetingNumber = new URLSearchParams(window.location.search).get('meetingnumber')
   var role = 0
   var leaveUrl = 'https://zoom.us/'
-  var userName = 'Client View 240'
+  var userName = 'Client View 250'
   var userEmail = 'client@kelmagaoay.com'
   var passWord = new URLSearchParams(window.location.search).get('passcode')
   // pass in the registrant's token if your meeting or webinar requires registration. More info here:
@@ -80,7 +80,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        <h1>WebSDK Client View 240</h1>
+        <h1>WebSDK Client View 250</h1>
 
         <button onClick={getSignature}>MeetNow Train</button>
       </main>
