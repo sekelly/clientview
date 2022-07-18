@@ -16,7 +16,7 @@ ZoomMtg.i18n.reload('en-US');
 function App() {
 
   // setup your signature endpoint here: https://github.com/zoom/meetingsdk-sample-signature-node.js
-  var signatureEndpoint = 'http:localhost:4000'
+  var signatureEndpoint = 'https://websdk210.herokuapp.com'
   var apiKey = 'qzloYzd5SRKT9ve2PMc88Q'
   var meetingNumber = new URLSearchParams(window.location.search).get('meetingnumber')
   var role = 0
